@@ -1,4 +1,5 @@
 classes: classes.hpp classes.cpp
-  g++ -c classes.cpp classes.hpp -o classes.out -Wall
-compile:  classes main.cpp
-  g++ -c main.cpp -o main.exe
+	g++ -Wall classes.cpp classes.hpp 
+compile:
+	touch arc.text || echo "arc.text already exists"
+	g++ -Wall classes.hpp main.cpp -o main.exe
